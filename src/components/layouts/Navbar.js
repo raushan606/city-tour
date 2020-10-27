@@ -2,14 +2,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-      <a className="navbar-brand text-white text-uppercase" href="#">
+      <Link className="navbar-brand text-white text-uppercase" to="/">
         <img src={logo} alt="logo" style={{ width: "35px" }} />
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -25,21 +26,21 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
           <li className="nav-item active">
-            <a className="nav-link text-white text-uppercase ml-5" href="#">
+            <Link className="nav-link text-white text-uppercase ml-5" to="/home">
               <FontAwesomeIcon icon={faHome} />
               &nbsp; Home
               <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white text-uppercase ml-5" href="#">
+            <Link className="nav-link text-white text-uppercase ml-5" to="/news">
               News
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link text-white text-uppercase ml-5" href="#">
+            <Link className="nav-link text-white text-uppercase ml-5" to="/contacts">
               Contact us
-            </a>
+            </Link>
           </li>
         </ul>
         <form className="form-inline my-2 my-lg-0">

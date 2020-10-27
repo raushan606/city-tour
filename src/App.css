@@ -5,3 +5,11 @@
   --mainLightGrey: rgba(172, 172, 172);
   --mainBlue: #007bff;
 }
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+.navbar-toggler {
+  border: none;
+}

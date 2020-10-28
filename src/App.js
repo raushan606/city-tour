@@ -21,7 +21,7 @@ export default class App extends Component {
           <Route path="/details" component={Details} />
           <Route path="/news" component={News} />
           <Route path="/contacts" component={Contacts} />
-          <Route path="/notfoundpage" component={NotFoundPage} />
+          <Route component={NotFoundPage} />
         </Switch>
 
         <Footer />

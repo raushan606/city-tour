@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faBars,
+  faNewspaper,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import logo from "../../logo.svg";
 import { Link } from "react-router-dom";
 
@@ -20,26 +25,36 @@ function Navbar() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span className="navbar-toggler-icon"></span>
+        <span>
+          <FontAwesomeIcon icon={faBars} style={{ color: "white" }} />
+        </span>
       </button>
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav m-auto">
           <li className="nav-item active">
-            <Link className="nav-link text-white text-uppercase ml-5" to="/home">
+            <Link className="nav-link text-white text-uppercase ml-5" to="/">
               <FontAwesomeIcon icon={faHome} />
               &nbsp; Home
               <span className="sr-only">(current)</span>
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white text-uppercase ml-5" to="/news">
-              News
+            <Link
+              className="nav-link text-white text-uppercase ml-5"
+              to="/news"
+            >
+              <FontAwesomeIcon icon={faNewspaper} />
+              &nbsp; News
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link text-white text-uppercase ml-5" to="/contacts">
-              Contact us
+            <Link
+              className="nav-link text-white text-uppercase ml-5"
+              to="/contacts"
+            >
+              <FontAwesomeIcon icon={faPhone} />
+              &nbsp; Contact us
             </Link>
           </li>
         </ul>

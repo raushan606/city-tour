@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import { InfoConsumer } from "../context";
+import Info from "../Info";
 export default class Home extends Component {
   render() {
     return (
-      <div>
-        <InfoConsumer>
-          {(data) => {
-            return <h2>{data}</h2>;
-          }}
-        </InfoConsumer>
+      <div className="container">
+        <div className="row mt-5">
+          <InfoConsumer>
+            {(data) => {
+              return data.info.map((item) => {
+                return <Info key={item.id} item={item} />;
+              });
+            }}
+          </InfoConsumer>
+        </div>
       </div>
     );
   }
